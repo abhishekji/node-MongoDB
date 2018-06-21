@@ -6,6 +6,7 @@ var {Todo} = require('./models/todo');
 var {Users} = require('./models/user');
 
 var app = express();
+const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.post('/todos',(req, res)=> {
 console.log(req.body);
@@ -43,8 +44,8 @@ res.status(400).send();
 
 });
 
-app.listen(3000, () => {
-console.log('Starting on port 3000');
+app.listen(port, () => {
+console.log(`Starting on port ${port}`);
 });
 // var TodoDoc = new Todo({
 //     text:'Document'
@@ -58,3 +59,4 @@ console.log('Starting on port 3000');
 // },(err) => {
 //     console.log('Error present');
 // });
+module.exports={app};
