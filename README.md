@@ -1,0 +1,1 @@
+-> Small project specifying the CRUD operations in connection to node MongoDB set up
